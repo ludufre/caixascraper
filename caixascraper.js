@@ -40,6 +40,8 @@ const stepExport = async (page, options) => {
   // Go to statement page
 
   await page.waitForTimeout(1500);
+  await stepClosePossiblePopup(page);
+  await page.waitForTimeout(1500);
   await page.type('#pesquisa', 'Extrato');
   await page.waitForTimeout(500);
 
@@ -123,6 +125,12 @@ const stepExport = async (page, options) => {
 const stepAwaitRegularLoading = async (page) => {
   await page.waitForSelector('div.modalBgLoading', { visible: true, timeout: 3000 })
   await page.waitForSelector('div.modalBgLoading', { hidden: true })
+}
+
+const stepClosePossiblePopup = async (page) => {
+  await page.waitForSelector('#banner-campanha', { timeout: 4000 })
+    .then(() => page.click('#btnPromoFechar', { delay: 300 })) // eslint-disable-line
+    .catch(() => { })
 }
 
 const fillPassword = async (page, password) => {
