@@ -1,0 +1,23 @@
+{
+  "name": "caixascraper",
+  "version": "1.0.0",
+  "description": "puppeteer caixa economica scraper",
+  "main": "run.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": "Luan Freitas",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "mkdirp": "^1.0.4",
+    "moment": "^2.29.4",
+    "nconf": "^0.11.4",
+    "puppeteer": "^13.1.2",
+    "uuid": "^8.3.2",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.4"
+  }
+}

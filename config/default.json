@@ -1,0 +1,18 @@
+{
+  "puppeteer": {
+    "headless": true,
+    "devtools": false,
+    "timeout": 600000
+  },
+  "viewport": {
+    "width": 1280,
+    "height": 768
+  },
+  "caixa": {
+    "url": "https://internetbanking.caixa.gov.br/sinbc/#!nb/login"
+  },
+  "download": {
+    "path": "./download",
+    "filename": "CAIXA_${month}_${timestamp}"
+  }
+}
