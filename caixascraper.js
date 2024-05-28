@@ -51,7 +51,7 @@ const stepExport = async (page, options) => {
       item.click();
       await stepAwaitRegularLoading(page);
       fnd = true;
-      console.log('Account holder selected.')
+      console.log('Menu item selected.')
       break;
     }
   }
