@@ -8,6 +8,10 @@ Available file formats:
 - OFX - Money 2000
 - OFC 1.0 - Money 1995 a Money 1999
 
+## Prerequisites
+- You should have Warsaw (Guardião) installed and working.
+- You have to activate the Browser via ATM or Mobile App.
+
 ## Usage
 ```bash
 node run.js --user=ABCDEFG --password=xxxxxx --month Janeiro/2024
