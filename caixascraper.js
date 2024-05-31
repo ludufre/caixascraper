@@ -215,8 +215,15 @@ const scraper = async (options) => {
   console.debug('Viewport - options', options.viewport)
   page.setViewport(options.viewport)
 
-  await stepLogin(page, options)
-  await stepExport(page, options)
+  try {
+    await stepLogin(page, options)
+    await stepExport(page, options)
+  } catch (err) {
+    console.error(err)
+    console.log(fs.readdirSync(path.join(__dirname, 'download')));
+    await page.screenshot({ path: path.join(__dirname, 'download', 'error.png') });
+    console.log(fs.readdirSync(path.join(__dirname, 'download')));
+  }
 
   await browser.close()
 
