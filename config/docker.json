@@ -1,5 +1,0 @@
-{
-  "puppeteer": {
-    "executablePath": "google-chrome-stable"
-  }
-}
